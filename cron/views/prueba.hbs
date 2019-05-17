@@ -1,0 +1,28 @@
+<div>
+    <section>
+        <h2>Lista de usuarios</h2>
+        {{#if users.length}}
+            {{!-- <ol> --}}
+            {{#each users}}
+                {{!-- <li> --}}
+                <p>{{id}} -> {{name}}</p>
+                {{!-- </li> --}}
+            {{/each}}
+            {{!-- </ol> --}}
+        {{else}}
+            <p>No existen usuarios</p>
+        {{/if}}
+
+        {{!-- {{#unless users}}
+            No hay usuarios con unless
+        {{/unless}} --}}
+    </section>
+    <section>
+        <h2>Administrador</h2>
+        {{#with admin}}
+            <p>{{nombre}} {{apellidos}}</p>
+        {{else}}
+            <p>No existe administrador</p>
+        {{/with}}
+    </section>
+</div>
